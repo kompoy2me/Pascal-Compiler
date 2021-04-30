@@ -1,0 +1,2 @@
+    0           error         "test1"        "test1"
+    7             eof                               

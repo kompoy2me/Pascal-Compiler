@@ -1,0 +1,5 @@
+var x"$:real;
+begin
+     x:= 99.63e-4 +1;
+     writeln('x is ', x);
+end.
