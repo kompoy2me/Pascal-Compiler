@@ -1,7 +1,7 @@
 var a : longint;
  
 function DEC_BIN(x:longint):string;
-const digits:array [01] of char = ('0','1');
+const digits:array [0..1] of char = ('0','1');
 var res:string; d:01;
 begin
    res:='';

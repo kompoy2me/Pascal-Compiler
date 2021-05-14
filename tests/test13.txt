@@ -1,0 +1,10 @@
+
+//comment
+ //comment
+var n {comm} :integer;  //comment
+begin{}
+     {comment2}writeln( 'write N' );
+     a:=a/ 3 /54 +6/9 + '';//
+     writeln('N!=',f(n));{comm
+ent4}
+end.

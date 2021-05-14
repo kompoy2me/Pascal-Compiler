@@ -1,7 +1,0 @@
-    0          number               2              2
-    2          number              15             15
-    5           float             2.5            2.5
-    9           float            15.0           15.0
-   14           float          0.5e-2          0.005
-   21           error              5e             5e
-   22             eof                               

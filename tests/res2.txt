@@ -1,3 +1,0 @@
-    0     reserved id             var            var
-    4           error              x"             x"
-    5             eof                               
