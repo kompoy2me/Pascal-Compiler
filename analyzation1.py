@@ -21,17 +21,24 @@ class analyzation:
 		self.curr_l = 1
 		self.lexem_pos = '1:1'
 		self.curr_s = ""
+
+		self.current_lexem = ""
 		
 		
 #	
 #		START
 #
+	def lex_get(self):
+		return self.current_lexem
+
+	def lex_next(self):
+		self.current_lexem = self.analyzer()
+
 	def analyzer(self):
-		while True:
-			lexem = self.get_lex()
-			return lexem
-			if  lexem.get_type() == 'eof':
-				break
+		lexem = self.get_lex()
+		return lexem
+		
+		
 #
 #		MAIN
 #
@@ -63,10 +70,12 @@ class analyzation:
 			
 			if stat.get_state() == 7:
 				self.error_state = True
-				lex_len = len(buff.get_buff())-1
-				if self.curr_symbs[0] == "":
-					lex_len = len(buff.get_buff())
-				return self.create_lex(buff, 7)	
+				#lex_len = len(buff.get_buff())-1
+				#if self.curr_symbs[0] == "":
+					#lex_len = len(buff.get_buff())
+				return self.create_lex(buff, 7)
+# 		ВЫНЕСТИ В ОТДЕЛЬНУЮ ФУНКЦИЮ
+			
 
 			if stat.get_state() == 4 and self.define_symb(self.curr_symbs[0]) == "N" and self.curr_symbs[1] == ".":
 				self.get__next()
@@ -79,6 +88,9 @@ class analyzation:
 				else:
 					next_state = 7
 					buff.add_buff(self.curr_symbs[0])
+
+			#print('BUFFER ', buff.get_buff())
+#		--->
 
 
 			stat.set_state( next_state )
@@ -110,6 +122,8 @@ class analyzation:
 #		MAIN
 #
 
+	def check_dot():
+		pass
 	def get_next_symb(self):
 		next_s = self.input_file.read(1)
 		if next_s :
@@ -172,7 +186,15 @@ class analyzation:
 
 		if state == 4:
 			type_s = 'int'
-
+			#value = int(buff.get_buff())
+			'''lex_str = buff.get_buff()
+			i = buff.get_buff().find('..')
+			if i != (-1):
+				with open("result.txt", "a") as f:
+					f.write(str(self.curr_p - len(buff.get_buff())+1) + "	" + type_s + "	" + lex_str[0:i] +'\n')
+					f.write(str(self.curr_p - len(buff.get_buff())+1+i) + "	" + 'delimiter' + "	" + lex_str[i:i+2] +'\n')
+				buff.clear_buff()
+				buff.add_buff(lex_str[i+2:])'''
 		elif state == 5:
 			type_s = 'string'
 			value = value.replace("'",'')
