@@ -13,10 +13,9 @@ class analyzation:
 		'procedure', 'program', 'record', 'repeat', 'set', 'then','to', 'type', 'until', 'var', 'while', 'with', 'writeln']
 		self.curr_symbs = ['','']
 		self.input_file = open(Path, 'r')
-		self.error_state = False
+		#self.error_state = False
 		self.init_array = False
-		self.end_lexem = False
-		#ТЕКУЩИЕ СИМВОЛ И ПОЗИЦИЯ
+		
 		self.curr_p = 0
 		self.curr_l = 1
 		self.lexem_pos = '1:1'
@@ -46,11 +45,11 @@ class analyzation:
 		buff = Buffer()
 		stat = State()
 		dict_state = dict_of_states()
-		lexem_type = "_"
-		
-		if  self.error_state:
-			self.error_state  = False
-			return self.create_lex(buff, 3)
+
+
+		#if  self.error_state:
+		#	self.error_state  = False
+		#	return self.create_lex(buff, 3)
 
 		if self.curr_symbs[1] == '':
 			self.curr_symbs[1] = self.get_next_symb()
@@ -69,13 +68,18 @@ class analyzation:
 			self.state_action(stat.get_state(),buff)
 			
 			if stat.get_state() == 7:
-				self.error_state = True
-				#lex_len = len(buff.get_buff())-1
-				#if self.curr_symbs[0] == "":
-					#lex_len = len(buff.get_buff())
-				return self.create_lex(buff, 7)
+				#строка, номер символа и текст сообщения об ошибке
+				str_err = self.lexem_pos + " Unexpected symbol"
+				raise ValueError(str_err);
+				#
+				# бросить исключение 
+				#
+				#self.error_state = True
+				#return self.create_lex(buff, 7)
+
+
+
 # 		ВЫНЕСТИ В ОТДЕЛЬНУЮ ФУНКЦИЮ
-			
 
 			if stat.get_state() == 4 and self.define_symb(self.curr_symbs[0]) == "N" and self.curr_symbs[1] == ".":
 				self.get__next()
@@ -87,9 +91,9 @@ class analyzation:
 					return self.create_lex(buff, 4)
 				else:
 					next_state = 7
-					buff.add_buff(self.curr_symbs[0])
-
-			#print('BUFFER ', buff.get_buff())
+					str_err = self.lexem_pos+ " Uncorrected array initialization"
+					raise ValueError(str_err);
+					#buff.add_buff(self.curr_symbs[0])
 #		--->
 
 
@@ -106,7 +110,9 @@ class analyzation:
 						if buff.get_buff()[0] == buff.get_buff()[-1] == "'":
 							return self.create_lex(buff, 5)
 						if not buff.get_buff() in self.Delimiters:
-							stat.set_state(7)
+							str_err = self.lexem_pos+ " Wrong delimiter"
+							raise NameError(str_err);
+							#stat.set_state(7)
 						else:
 							return self.create_lex(buff, lexem_type)
 					else: 
@@ -122,14 +128,8 @@ class analyzation:
 #		MAIN
 #
 
-	def check_dot():
-		pass
 	def get_next_symb(self):
-		next_s = self.input_file.read(1)
-		if next_s :
-			return next_s
-		else:
-			return ""
+		return self.input_file.read(1)
 
 	def get__next(self):
 		self.curr_symbs[0] = self.curr_symbs[1]
@@ -141,21 +141,15 @@ class analyzation:
 		
 
 	def state_action(self, stat, buff):
-		
 		if stat != 1 and stat != 81 and stat != 80:
 			if self.lexem_pos == -1:
 				self.lexem_pos = str(self.curr_l) + ':' + str(self.curr_p)
-			if  stat == 9 and buff.get_buff() == "/" :
-				print(self.curr_symbs[0], self.curr_symbs[1] )
 
 			buff.add_buff(self.curr_symbs[0])
 			if self.init_array:
-				#if buff.get_buff()==".":
 				buff.add_buff(self.curr_symbs[0])
 				self.init_array = False
 		
-			
-
 
 	def define_symb(self,symb):
 		if symb == "":
@@ -186,15 +180,6 @@ class analyzation:
 
 		if state == 4:
 			type_s = 'int'
-			#value = int(buff.get_buff())
-			'''lex_str = buff.get_buff()
-			i = buff.get_buff().find('..')
-			if i != (-1):
-				with open("result.txt", "a") as f:
-					f.write(str(self.curr_p - len(buff.get_buff())+1) + "	" + type_s + "	" + lex_str[0:i] +'\n')
-					f.write(str(self.curr_p - len(buff.get_buff())+1+i) + "	" + 'delimiter' + "	" + lex_str[i:i+2] +'\n')
-				buff.clear_buff()
-				buff.add_buff(lex_str[i+2:])'''
 		elif state == 5:
 			type_s = 'string'
 			value = value.replace("'",'')
@@ -212,16 +197,20 @@ class analyzation:
 		elif state == 2:
 			type_s = 'hex'
 			value = hex(int(value.replace('$',""), 16))
-		elif state == 7:
-			type_s = 'error'
+		#elif state == 7:
+		#	type_s = 'error'
 		elif state == 3:
 			type_s = 'eof'
 		else:
 			type_s = state
 		new_lex = Lexer(self.lexem_pos, type_s, buff.get_buff(), value)
 		
-		if state != 7:
-			self.lexem_pos = -1
+		#if state != 7:
+		#	self.lexem_pos = -1
+		#buff.clear_buff()
+		#return new_lex
+
+		self.lexem_pos = -1
 		buff.clear_buff()
 		return new_lex
 	

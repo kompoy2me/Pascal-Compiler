@@ -1,4 +1,5 @@
 from analyzation1 import *
+import traceback
 class test:
 	def __init__(self):
 		self.check()
@@ -12,12 +13,24 @@ class test:
 			analyz = analyzation(test_prog)
 			
 			while True:
-				lexem = analyz.analyzer()
-				with open("result.txt", "a") as f:
-					f.write("%5s%16s%16s%16s" % (lexem.get_pos(), str(lexem.get_type()),str(lexem.get_orig()), str(lexem.get_value()) + '\n'))
-				if  lexem.get_type() == 'eof':
+				try:
+					lexem = analyz.analyzer()
+					
+				except ValueError as e:
+					print(traceback.format_exc())
 					break
-
+				except NameError as e:
+					print(traceback.format_exc())
+					break
+				else:
+					with open("result.txt", "a") as f:
+						f.write("%5s%16s%16s%16s" % (lexem.get_pos(), str(lexem.get_type()),str(lexem.get_orig()), str(lexem.get_value()) + '\n'))
+						if  lexem.get_type() == 'eof':
+							break
+				finally:
+					pass
+				
+				
 			with open("result.txt", "r") as f:
 				result = f.read()
 			with open("tests\\test"+str(i)+"_res.txt", "r") as f:

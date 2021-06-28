@@ -1,2 +1,1 @@
-      
-1:4 Error: Unexpected symbol eof
+ValueError: 1:4 Wrong operand

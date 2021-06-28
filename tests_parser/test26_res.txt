@@ -1,2 +1,1 @@
-    @ 
-1:5 Error: Unexpected symbol @
+ValueError: 1:5 Unexpected symbol
