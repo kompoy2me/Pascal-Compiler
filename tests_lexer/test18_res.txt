@@ -1,9 +1,1 @@
-  1:1              id               f              f
-  1:7       delimiter               +              +
- 1:12             int               9              9
- 1:18       delimiter               =              =
- 1:24             int               8              8
- 1:31       delimiter               ;              ;
-  2:1     reserved id             end            end
-  2:9       delimiter               .              .
- 2:10             eof                               
+ValueError: 1:4 Unexpected symbol '''

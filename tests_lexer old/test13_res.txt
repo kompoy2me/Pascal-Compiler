@@ -1,0 +1,38 @@
+  4:1     reserved id             var            var
+  4:5              id               n              n
+ 4:14       delimiter               :              :
+ 4:15     reserved id         integer        integer
+ 4:22       delimiter               ;              ;
+  5:1     reserved id           begin          begin
+ 6:16     reserved id         writeln        writeln
+ 6:23       delimiter               (              (
+ 6:25          string       'write N'        write N
+ 6:35       delimiter               )              )
+ 6:36       delimiter               ;              ;
+  7:6              id               a              a
+  7:7       delimiter              :=             :=
+  7:9              id               a              a
+ 7:10       delimiter               /              /
+ 7:12             int               3              3
+ 7:14       delimiter               /              /
+ 7:15             int              54             54
+ 7:18       delimiter               +              +
+ 7:19             int               6              6
+ 7:20       delimiter               /              /
+ 7:21             int               9              9
+ 7:23       delimiter               +              +
+ 7:25          string              ''               
+ 7:27       delimiter               ;              ;
+  8:6     reserved id         writeln        writeln
+ 8:13       delimiter               (              (
+ 8:14          string           'N!='            N!=
+ 8:19       delimiter               ,              ,
+ 8:20              id               f              f
+ 8:21       delimiter               (              (
+ 8:22              id               n              n
+ 8:23       delimiter               )              )
+ 8:24       delimiter               )              )
+ 8:25       delimiter               ;              ;
+ 10:1     reserved id             end            end
+ 10:4       delimiter               .              .
+ 10:5             eof                               

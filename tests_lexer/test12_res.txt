@@ -1,5 +1,1 @@
-  1:1              id               a              a
-  1:2       delimiter              :=             :=
-  1:5             hex            $FF7          0xff7
-  1:9       delimiter               ;              ;
- 1:10             eof                               
+ValueError: 1:4 invalid symbol for int with base 2

@@ -1,0 +1,19 @@
+  1:1     reserved id             var            var
+  1:5              id               a              a
+  1:6       delimiter               :              :
+  1:7     reserved id           array          array
+ 1:12       delimiter               [              [
+ 1:13             int           18810          18810
+ 1:19       delimiter              ..             ..
+ 1:20             int           15529          15529
+ 1:25       delimiter               ]              ]
+ 1:27     reserved id              of             of
+ 1:30     reserved id         integer        integer
+ 1:37       delimiter               ;              ;
+  2:1              id               s              s
+  2:2       delimiter              :=             :=
+  2:5           float           4.0e7     40000000.0
+ 2:10       delimiter               ;              ;
+  3:1     reserved id             end            end
+  3:4       delimiter               .              .
+  3:5             eof                               

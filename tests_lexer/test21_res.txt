@@ -1,1 +1,1 @@
-  1:1             eof                               
+ValueError: 1:6 Unexpected symbol 'i'

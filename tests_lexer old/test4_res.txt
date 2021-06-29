@@ -1,0 +1,101 @@
+  1:1     reserved id             var            var
+  1:5              id               a              a
+  1:7       delimiter               :              :
+  1:9              id         longint        longint
+ 1:16       delimiter               ;              ;
+  3:1     reserved id        function       function
+ 3:10              id         DEC_BIN        DEC_BIN
+ 3:17       delimiter               (              (
+ 3:18              id               x              x
+ 3:19       delimiter               :              :
+ 3:20              id         longint        longint
+ 3:27       delimiter               )              )
+ 3:28       delimiter               :              :
+ 3:29     reserved id          string         string
+ 3:35       delimiter               ;              ;
+  4:1     reserved id           const          const
+  4:7              id          digits         digits
+ 4:13       delimiter               :              :
+ 4:14     reserved id           array          array
+ 4:20       delimiter               [              [
+ 4:21             int               0              0
+ 4:23       delimiter              ..             ..
+ 4:24             int               1              1
+ 4:25       delimiter               ]              ]
+ 4:27     reserved id              of             of
+ 4:30     reserved id            char           char
+ 4:35       delimiter               =              =
+ 4:37       delimiter               (              (
+ 4:38          string             '0'              0
+ 4:41       delimiter               ,              ,
+ 4:42          string             '1'              1
+ 4:45       delimiter               )              )
+ 4:46       delimiter               ;              ;
+  5:1     reserved id             var            var
+  5:5              id             res            res
+  5:8       delimiter               :              :
+  5:9     reserved id          string         string
+ 5:15       delimiter               ;              ;
+ 5:17              id               d              d
+ 5:18       delimiter               :              :
+ 5:19             int              01             01
+ 5:21       delimiter               ;              ;
+  6:1     reserved id           begin          begin
+  7:4              id             res            res
+  7:7       delimiter              :=             :=
+  7:9          string              ''               
+ 7:11       delimiter               ;              ;
+  8:4     reserved id           while          while
+ 8:10       delimiter               (              (
+ 8:11              id               x              x
+ 8:12       delimiter              <>             <>
+ 8:14             int               0              0
+ 8:15       delimiter               )              )
+ 8:17     reserved id              do             do
+ 8:20     reserved id           begin          begin
+  9:7              id               d              d
+  9:8       delimiter              :=             :=
+ 9:10              id               x              x
+ 9:12     reserved id             mod            mod
+ 9:16             int               2              2
+ 9:17       delimiter               ;              ;
+ 9:19              id             res            res
+ 9:22       delimiter              :=             :=
+ 9:24              id          digits         digits
+ 9:30       delimiter               [              [
+ 9:31              id               d              d
+ 9:32       delimiter               ]              ]
+ 9:33       delimiter               +              +
+ 9:34              id             res            res
+ 9:37       delimiter               ;              ;
+ 10:7              id               x              x
+ 10:8       delimiter              :=             :=
+10:10              id               x              x
+10:12              id             div            div
+10:16             int               2              2
+10:17       delimiter               ;              ;
+ 11:4     reserved id             end            end
+ 11:7       delimiter               ;              ;
+ 12:4              id         DEC_BIN        DEC_BIN
+12:11       delimiter              :=             :=
+12:13              id             res            res
+12:16       delimiter               ;              ;
+ 13:1     reserved id             end            end
+ 13:4       delimiter               ;              ;
+ 15:1     reserved id           begin          begin
+ 16:3     reserved id          readln         readln
+ 16:9       delimiter               (              (
+16:11              id               a              a
+16:13       delimiter               )              )
+16:14       delimiter               ;              ;
+ 17:3     reserved id         writeln        writeln
+17:10       delimiter               (              (
+17:12              id         DEC_BIN        DEC_BIN
+17:19       delimiter               (              (
+17:20              id               a              a
+17:21       delimiter               )              )
+17:23       delimiter               )              )
+17:24       delimiter               ;              ;
+ 18:1     reserved id             end            end
+ 18:4       delimiter               .              .
+ 18:5             eof                               

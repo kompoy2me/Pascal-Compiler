@@ -1,0 +1,59 @@
+  2:1     reserved id             var            var
+  2:5              id               a              a
+  2:6       delimiter               :              :
+  2:7     reserved id           array          array
+ 2:12       delimiter               [              [
+ 2:13             int               1              1
+ 2:15       delimiter              ..             ..
+ 2:16             int              10             10
+ 2:18       delimiter               ]              ]
+ 2:20     reserved id              of             of
+ 2:23     reserved id         integer        integer
+ 2:31       delimiter               ;              ;
+  3:1              id               i              i
+  3:2       delimiter               ,              ,
+  3:3              id               j              j
+  3:4       delimiter               :              :
+  3:5     reserved id         integer        integer
+ 3:12       delimiter               ;              ;
+  4:2              id               i              i
+  4:3       delimiter              :=             :=
+  4:6              id               i              i
+  4:7       delimiter               /              /
+  4:8              id               j              j
+  4:9       delimiter               ;              ;
+  5:2     reserved id           begin          begin
+  8:6     reserved id         writeln        writeln
+ 8:13       delimiter               (              (
+ 8:14          string    'write smth'     write smth
+ 8:26       delimiter               )              )
+ 8:27       delimiter               ;              ;
+  9:8     reserved id             end            end
+ 9:11       delimiter               ;              ;
+ 10:8     reserved id              if             if
+10:11              id               j              j
+10:12       delimiter               <              <
+10:13             int              10             10
+10:16     reserved id            then           then
+10:21              id           break          break
+10:26       delimiter               ;              ;
+ 12:6     reserved id             end            end
+ 12:9       delimiter               ;              ;
+ 13:6     reserved id              if             if
+ 13:9              id               i              i
+13:10       delimiter               <              <
+13:11             int               9              9
+13:13     reserved id            then           then
+13:18     reserved id         writeln        writeln
+13:25       delimiter               (              (
+13:26          string'there are same' there are same
+13:42       delimiter               )              )
+14:14     reserved id            else           else
+14:19     reserved id         writeln        writeln
+14:26       delimiter               (              (
+14:27          string'there are different'there are different
+14:48       delimiter               )              )
+14:49       delimiter               ;              ;
+ 15:1     reserved id             end            end
+ 15:4       delimiter               .              .
+ 15:5             eof                               

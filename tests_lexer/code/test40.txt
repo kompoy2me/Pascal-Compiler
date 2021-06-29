@@ -1,0 +1,10 @@
+e = 2.7182818;  { Real type constant. }  
+a = 2;          { Ordinal (Integer) type constant. }  
+c = '4';        { Character type constant. }  
+s = 'This is a constant string'; {String type constant.}  
+sc = chr(32)  
+ls = SizeOf(Longint);  
+P = Nil;  
+Ss = [1,2];
+Direction = ( North, East, South, West );
+TA = Array[0..9,0..9] of Integer;

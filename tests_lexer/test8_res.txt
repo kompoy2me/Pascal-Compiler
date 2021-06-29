@@ -1,2 +1,1 @@
-  1:1           error              .5             .5
-  1:1             eof                               
+ValueError: 1:5 Wrong float format

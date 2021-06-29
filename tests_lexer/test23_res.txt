@@ -1,0 +1,2 @@
+  1:1          string'A tabulator character:'#9'is easy to embed'A tabulator character:	is easy to embed
+ 1:45             eof                               

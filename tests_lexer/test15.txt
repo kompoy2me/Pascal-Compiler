@@ -1,4 +1,4 @@
-5..
-..5
-
-end.
+'String.'
+'Its "String"'
+''
+'a'

@@ -1,15 +1,1 @@
-  2:1             int               1              1
-  2:2       delimiter               /              /
-  2:3             int               2              2
-  3:1             int               3              3
-  3:3       delimiter               /              /
-  3:5             int               4              4
-  4:1             int               5              5
-  4:2       delimiter               /              /
-  4:4             int               6              6
-  5:1             int               7              7
-  5:3       delimiter               /              /
-  5:4             int               8              8
-  6:1     reserved id             end            end
-  6:4       delimiter               .              .
-  6:5             eof                               
+ValueError: 1:5 invalid symbol for int with base 16

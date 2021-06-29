@@ -1,0 +1,5 @@
+  1:1              id               a              a
+  1:2       delimiter              ..             ..
+  1:4              id               h              h
+  2:1              id               h              h
+  2:2             eof                               

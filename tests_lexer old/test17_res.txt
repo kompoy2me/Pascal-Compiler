@@ -1,0 +1,2 @@
+ValueError: 2:1 Unexpected symbol
+  1:1          string           'str'            str

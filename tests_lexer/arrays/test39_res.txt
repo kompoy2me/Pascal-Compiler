@@ -1,0 +1,21 @@
+  1:1       delimiter               [              [
+  1:2             int             123            123
+  1:6       delimiter              ..             ..
+  1:8             int             456            456
+ 1:11       delimiter               ]              ]
+  2:1       delimiter               [              [
+  2:2             int             123            123
+  2:6       delimiter              ..             ..
+  2:7             int             456            456
+ 2:10       delimiter               ]              ]
+  3:1       delimiter               [              [
+  3:2             int             123            123
+  3:6       delimiter              ..             ..
+  3:9             int             456            456
+ 3:12       delimiter               ]              ]
+  4:1       delimiter               [              [
+  4:2             int             123            123
+  4:6       delimiter              ..             ..
+  4:8             int             456            456
+ 4:11       delimiter               ]              ]
+ 4:12             eof                               

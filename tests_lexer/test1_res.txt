@@ -1,2 +1,11 @@
-  1:1          string         'test1'          test1
-  1:8             eof                               
+  1:1             int               2              2
+  2:1       delimiter               -              -
+  2:2             int               2              2
+  3:1             int              15             15
+  4:1           float             2.5            2.5
+  5:1           float            15.0           15.0
+  6:1       delimiter               -              -
+  6:2           float             1.0            1.0
+  7:1           float          0.5e-2          0.005
+  8:1           float           0.5e2           50.0
+  8:6             eof                               

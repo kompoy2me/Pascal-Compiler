@@ -1,0 +1,11 @@
+//comment
+begin
+{a lot of
+comments}
+	write('Hello World');//this is comment
+{this is another comment}{comment again}
+	readln;
+{comment1}
+//comment2
+{comment3}
+end.

@@ -10,7 +10,7 @@ print('type parser for PARSER')
 
 #command = input()
 #test = tester(command)
-test = tester("parser")
+test = tester("lexer")
 '''
 command = 'pars'
 if command == 'lex':

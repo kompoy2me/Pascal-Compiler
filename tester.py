@@ -10,7 +10,9 @@ class tester:
 
 	def check(self):
 		count = 0
-		for i in range(1,36):#заменить на переменную
+		for i in range(1,40):#заменить на переменную
+
+
 
 			print("_____________TEST №", i, "_____________")
 			
@@ -25,15 +27,20 @@ class tester:
 				print('No such module')
 				return
 
+			with open(test_prog, "r") as f:
+				test = f.read()
+
+
 			with open("result.txt", "r") as f:
 				result = f.read()
 
 			with open(test_res, "r") as f:
 				test_result = f.read()
 
+			print(test)
 			print(result) #результат теста
-			print('----------------->')
-			print(test_result) #ответ
+			#print('----------------->')
+			#print(test_result) #ответ
 
 			if result == test_result:
 				print('OK')
@@ -56,7 +63,10 @@ class tester:
 				lexem = analyz.analyzer()
 			except Exception as e:
 				etype, evalue, tb = sys.exc_info()
-				print('{}: {}'.format(etype.__name__, evalue))
+				with open("result.txt", "w") as f:
+					f.close
+				with open("result.txt", "w") as f:
+					f.write('{}: {}'.format(etype.__name__, evalue))
 				break
 			else:
 				with open("result.txt", "a") as f:
@@ -77,7 +87,9 @@ class tester:
 			#print(traceback.format_exc())
 			#print(traceback.format_exception_only(type(e), e))
 			etype, evalue, tb = sys.exc_info()
-			print('{}: {}'.format(etype.__name__, evalue))
+			with open("result.txt", "a") as f:
+				f.write('{}: {}'.format(etype.__name__, evalue))
+			
 		else:
 			pass
 		finally:

@@ -1,0 +1,11 @@
+  2:1     reserved id           begin          begin
+  5:2              id           write          write
+  5:7       delimiter               (              (
+  5:8          string   'Hello World'    Hello World
+ 5:21       delimiter               )              )
+ 5:22       delimiter               ;              ;
+  7:2     reserved id          readln         readln
+  7:8       delimiter               ;              ;
+ 11:1     reserved id             end            end
+ 11:4       delimiter               .              .
+ 11:5             eof                               

@@ -1,0 +1,2 @@
+ValueError: 1:5 Unexpected symbol
+  1:1     reserved id             var            var

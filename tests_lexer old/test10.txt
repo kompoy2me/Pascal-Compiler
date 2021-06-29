@@ -1,0 +1,15 @@
+//comment
+var a:array[1..10] of integer ;    
+i,j:integer;
+	i:= i/j;
+	begin
+{a lot a lot of  
+comments}
+     writeln('write smth');
+       end;
+       if j<10 then break;//this is comment
+{this is another comment}{comment again}
+     end;
+     if i<9 then writeln('there are same')
+             else writeln('there are different');
+end.

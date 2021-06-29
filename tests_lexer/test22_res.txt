@@ -1,5 +1,5 @@
-  1:1              id               a              a
-  1:2       delimiter              ..             ..
-  1:4              id               h              h
-  2:1              id               h              h
-  2:2             eof                               
+  1:1          string'the string starts here'#10'and continues here'the string starts here
+and continues here
+  2:1          string           '#10'            #10
+  3:1          string       'str #10'        str #10
+ 3:10             eof                               
