@@ -1,1 +1,1 @@
-ValueError: 1:1 Unexpected symbol
+ValueError: 1:1 Unexpected symbol '@'
